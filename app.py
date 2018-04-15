@@ -26,6 +26,6 @@ def api():
         print(test)
         return '''<h1>The test value is: {}</h1>'''.format(test)
 
-if __name__ == '__main__':
-    #app.run(debug=True)
-    app.run(debug = True, host='127.0.0.1', port=1424)
+# if __name__ == '__main__':
+#     #app.run(debug=True)
+#     app.run(debug = True, host='127.0.0.1', port=1424)
