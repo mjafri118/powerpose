@@ -128,6 +128,7 @@ class PowerPose:
 		print("[INFO] elapsed time: {:.2f}".format(self.fps.elapsed()))
 		print("[INFO] approx. FPS: {:.2f}".format(self.fps.fps()))
 
+
 		# do a bit of cleanup
 		cv2.destroyAllWindows()
 		self.vs.stop()
@@ -151,6 +152,7 @@ class PowerPose:
 	def sampleplot(self):
 
 		plt.plot(self.time_list_g, self.area_list_g, 'ro')
+		plt.plot([0,1,2,3], [50000,60000,70000,80000], 'bo')
 		plt.axis([0, self.lastTime, 0, 100000])
 		#plt.plot(np.unique(self.time_list_g), np.poly1d(np.polyfit(self.time_list_g, self.area_list_g, 1))(np.unique(self.time_list_g)))
 		plt.show()
