@@ -5,6 +5,7 @@ app= Flask(__name__)
 
 # Databse Usage
 #db = SQL("sqlite:///database.db")
+# https://progblog.io/How-to-deploy-a-Flask-App-to-Heroku/ 
 
 #Ensure responses aren't cached
 @app.after_request
@@ -16,7 +17,7 @@ def after_request(response):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "I'ts working!"
 
 @app.route('/api', methods=['GET', 'POST'])
 def api():
